@@ -1,5 +1,7 @@
 -- STEAM BARREL --
 
+local iconSize = data.raw.item["empty-barrel"].icons[1].icon_size -- 32px in v0.17, 64px in v0.18
+
 local steamBarrel = {
   icon_mipmaps = 4,
   icon_size = 64,
@@ -7,28 +9,28 @@ local steamBarrel = {
     {
       icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png",
       icon_mipmaps = 4,
-      icon_size = 32 -- was 64
+      icon_size = iconSize -- 32px in v0.17, 64px in v0.18
     },
     {
       icon = "__base__/graphics/icons/fluid/barreling/barrel-side-mask.png",
       icon_mipmaps = 4,
-      icon_size = 32, -- was 64
+      icon_size = iconSize, -- 32px in v0.17, 64px in v0.18
       tint = {
         a = 0.75,
         b = 0.6,
         g = 0.34,
-        r = 0.7 -- was 0.0
+        r = 0.7 -- was 0.0 for water barrels
       }
     },
     {
       icon = "__base__/graphics/icons/fluid/barreling/barrel-hoop-top-mask.png",
       icon_mipmaps = 4,
-      icon_size = 32, -- was 64
+      icon_size = iconSize, -- 32px in v0.17, 64px in v0.18
       tint = {
         a = 0.75,
         b = 0.7,
         g = 0.7,
-        r = 0.7 -- was 0.0
+        r = 0.7 -- was 0.0 for water barrels
       }
     }
   },
@@ -58,23 +60,23 @@ local fillSteamRecipe = {
     {
       icon = "__base__/graphics/icons/fluid/barreling/barrel-fill.png",
       icon_mipmaps = 4,
-      icon_size = 32 -- was 64
+      icon_size = iconSize -- 32px in v0.17, 64px in v0.18
     },
     {
       icon = "__base__/graphics/icons/fluid/barreling/barrel-fill-side-mask.png",
       icon_mipmaps = 4,
-      icon_size = 32, -- was 64
+      icon_size = iconSize, -- 32px in v0.17, 64px in v0.18
       tint = {
         a = 0.75,
         b = 0.6,
         g = 0.34,
-        r = 0.7 -- was 0.0
+        r = 0.7 -- was 0.0 for water barrels
       }
     },
     {
       icon = "__base__/graphics/icons/fluid/barreling/barrel-fill-top-mask.png",
       icon_mipmaps = 4,
-      icon_size = 32, -- was 64
+      icon_size = iconSize, -- 32px in v0.17, 64px in v0.18
       tint = {
         a = 0.75,
         b = 0.7,
@@ -85,8 +87,8 @@ local fillSteamRecipe = {
     {
       icon = "__base__/graphics/icons/fluid/steam.png",
       icon_mipmaps = 4,
-      icon_size = 32, -- was 64
-      scale = 0.5,    -- was 0.25
+      icon_size = iconSize,  -- 32px in v0.17, 64px in v0.18
+      scale = 16 / iconSize, -- 0.5  in v0.17, 0.25 in v0.18
       shift = {
         4,
         -8
@@ -141,23 +143,23 @@ local emptySteamRecipe = {
     {
       icon = "__base__/graphics/icons/fluid/barreling/barrel-empty.png",
       icon_mipmaps = 4,
-      icon_size = 32 -- was 64
+      icon_size = iconSize -- 32px in v0.17, 64px in v0.18
     },
     {
       icon = "__base__/graphics/icons/fluid/barreling/barrel-empty-side-mask.png",
       icon_mipmaps = 4,
-      icon_size = 32, -- was 64
+      icon_size = iconSize, -- 32px in v0.17, 64px in v0.18
       tint = {
         a = 0.75,
         b = 0.6,
         g = 0.34,
-        r = 0.7 -- was 0.0
+        r = 0.7 -- was 0.0 for water barrels
       }
     },
     {
       icon = "__base__/graphics/icons/fluid/barreling/barrel-empty-top-mask.png",
       icon_mipmaps = 4,
-      icon_size = 32, -- was 64
+      icon_size = iconSize, -- 32px in v0.17, 64px in v0.18
       tint = {
         a = 0.75,
         b = 0.7,
@@ -168,8 +170,8 @@ local emptySteamRecipe = {
     {
       icon = "__base__/graphics/icons/fluid/steam.png",
       icon_mipmaps = 4,
-      icon_size = 32, -- was 64
-      scale = 0.5,    -- was 0.25
+      icon_size = iconSize,  -- 32px in v0.17, 64px in v0.18
+      scale = 16 / iconSize, -- 0.5  in v0.17, 0.25 in v0.18
       shift = {
         7,
         8
