@@ -4,7 +4,7 @@
     "title": "Barrels of Steam",
     "author": "forsyth",
     "contact": "",
-    "homepage": "https://github.com/fsyth/factorio-steam-barrels",
+    "homepage": "https://mods.factorio.com/mod/barrels-of-steam",
     "factorio_version": "0.17",
     "dependencies": ["base >= 0.17"],
     "description": "This mod adds steam barrels at 165 °C and 500 °C."

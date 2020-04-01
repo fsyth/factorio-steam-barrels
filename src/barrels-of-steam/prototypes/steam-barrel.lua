@@ -1,6 +1,6 @@
 -- STEAM BARREL --
 
-local iconSize = data.raw.item["empty-barrel"].icons[1].icon_size -- 32px in v0.17, 64px in v0.18
+local iconSize = data.raw.item["empty-barrel"].icon_size -- 32px in v0.17, 64px in v0.18
 
 local steamBarrel = {
   icon_mipmaps = 4,
