@@ -33,4 +33,4 @@ Unlocked by **Nuclear power** technology.
 
 Either download on [mods.factorio.com](https://mods.factorio.com/mod/barrels-of-steam)
 
-Or copy `build/barrels-of-steam_x.x.x.zip` into `%appdata%/Factorio/mods/` and launch Factorio.
+Or copy `build/<factorio_version>/barrels-of-steam_x.x.x.zip` into `%appdata%/Factorio/mods/` and launch Factorio.
