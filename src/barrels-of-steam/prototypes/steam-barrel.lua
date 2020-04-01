@@ -39,7 +39,7 @@ local steamBarrel = {
     }
   },
   name = "steam-barrel",
-  order = "b[steam-barrel]",
+  order = "b[steam-barrel-165]",
   stack_size = 10,
   subgroup = "fill-barrel",
   type = "item"
@@ -115,7 +115,7 @@ local fillSteamRecipe = {
     }
   },
   name = "fill-steam-barrel",
-  order = "b[fill-steam-barrel]",
+  order = "b[fill-steam-barrel-165]",
   results = {
     {
       amount = 1,
@@ -191,7 +191,7 @@ local emptySteamRecipe = {
     }
   },
   name = "empty-steam-barrel",
-  order = "c[empty-steam-barrel]",
+  order = "c[empty-steam-barrel-165]",
   results = {
     {
       amount = 50,
@@ -215,14 +215,14 @@ local emptySteamRecipe = {
 
 local superSteamBarrel = table.deepcopy(steamBarrel)
 superSteamBarrel.name = "super-steam-barrel"
-superSteamBarrel.order = "b[super-steam-barrel]"
+superSteamBarrel.order = "b[steam-barrel-500]"
 superSteamBarrel.localised_name[2][1] = "fluid-name.super-steam"
 superSteamBarrel.icons[2].tint.r = 1.0
 superSteamBarrel.icons[3].tint.r = 1.0
 
 local fillSuperSteamRecipe = table.deepcopy(fillSteamRecipe)
 fillSuperSteamRecipe.name = "fill-super-steam-barrel"
-fillSuperSteamRecipe.order = "b[fill-super-steam-barrel]"
+fillSuperSteamRecipe.order = "b[fill-steam-barrel-500]"
 fillSuperSteamRecipe.localised_name[2][1] = "fluid-name.super-steam"
 fillSuperSteamRecipe.icons[2].tint.r = 1.0
 fillSuperSteamRecipe.ingredients[1].minimum_temperature = 500.0
@@ -230,7 +230,7 @@ fillSuperSteamRecipe.results[1].name = "super-steam-barrel"
 
 local emptySuperSteamRecipe = table.deepcopy(emptySteamRecipe)
 emptySuperSteamRecipe.name = "empty-super-steam-barrel"
-emptySuperSteamRecipe.order = "c[empty-super-steam-barrel]"
+emptySuperSteamRecipe.order = "c[empty-steam-barrel-500]"
 emptySuperSteamRecipe.localised_name[2][1] = "fluid-name.super-steam"
 emptySuperSteamRecipe.icons[2].tint.r = 1.0
 emptySuperSteamRecipe.ingredients[1].name = "super-steam-barrel"
