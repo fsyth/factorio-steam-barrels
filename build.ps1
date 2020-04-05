@@ -6,11 +6,7 @@ echo $folder
 $intermediate = ".\build\$folder"
 $output = ".\build\$($info.factorio_version)\$folder.zip"
 
-if (Test-Path $output) {
-    Remove-Item -Path $output
-}
-
 Copy-Item '.\src' -Destination $intermediate -Recurse
-Compress-Archive -Path $intermediate -Update -DestinationPath $output
+Compress-Archive -Path $intermediate -Force -DestinationPath $output
 Remove-Item -Path $intermediate -Recurse
 Copy-Item $output -Destination "$($env:APPDATA)\Factorio\mods"
