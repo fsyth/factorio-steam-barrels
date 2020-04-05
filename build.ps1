@@ -1,4 +1,5 @@
 # Build Script
+# This script requires 7-zip (7z.exe) to be on your path
 
 # Need name, version, and factorio_version from info.json
 $info = Get-Content '.\src\info.json' | Out-String | ConvertFrom-Json
@@ -13,7 +14,8 @@ $output = ".\build\$($info.factorio_version)\$folder.zip"
 
 # Copy src to intermediate to be zipped to output, then clear up after
 Copy-Item '.\src' -Destination $intermediate -Recurse
-Compress-Archive -Path $intermediate -Force -DestinationPath $output
+#Compress-Archive -Path $intermediate -Force -DestinationPath $output
+7z a $output $intermediate\
 Remove-Item -Path $intermediate -Recurse
 
 # Install output zip to mods folder
