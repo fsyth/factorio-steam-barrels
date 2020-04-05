@@ -1,7 +1,7 @@
 # Barrels of Steam
 ###### A Factorio mod
 
-![Mod Thumbnail](src/barrels-of-steam/thumbnail.png "Mod Thumbnail")
+![Mod Thumbnail](src/thumbnail.png "Mod Thumbnail")
 
 This mod adds steam barrels at 165 °C and 500 °C, as well as recipes for barreling and unbarreling.
 
