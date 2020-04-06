@@ -35,11 +35,11 @@ Unlocked by **Nuclear power** technology.
 
 It's simplest to just use the in-game mod loader to search for "Barrels of Steam" to get the latest published release.
 
-But you can install a development version by copying `barrels-of-steam_x.x.x.zip` to [Factorio's mods folder](https://wiki.factorio.com/index.php?title=Application_directory).
+But you can install a development version by copying `barrels-of-steam_x.x.x.zip` to [Factorio's mods folder](https://wiki.factorio.com/index.php?title=Application_directory):
 - Windows `%appdata%\Factorio\mods`
 - Mac `~/Library/Application Support/factorio/mods`
 - Linux `~/.factorio/mods`
 
-Running the build script `build.ps1` in PowerShell zips up `src` and does this automatically (7-zip is required on your path).
+Running the build script `build.ps1` in PowerShell zips up `src` and does this automatically (Windows only, 7-zip is required on your path).
 
 Otherwise, copy a zip from `build/<factorio_version>/barrels-of-steam_x.x.x.zip`, or download from [mods.factorio.com](https://mods.factorio.com/mod/barrels-of-steam), and paste it to Factorio's mods folder:
