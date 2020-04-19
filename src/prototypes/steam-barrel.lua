@@ -1,8 +1,10 @@
+------------------
 -- STEAM BARREL --
+------------------
 
 local iconSize = data.raw.item["empty-barrel"].icon_size -- 32px in v0.17, 64px in v0.18
 
-local steamBarrel = {
+local steamBarrel165 = {
   icon_mipmaps = 4,
   icon_size = 64,
   icons = {
@@ -49,7 +51,7 @@ local steamBarrel = {
 
 -- FILL STEAM BARREL RECIPE --
 
-local fillSteamRecipe = {
+local fillSteamRecipe165 = {
   allow_decomposition = false,
   category = "crafting-with-fluid",
   enabled = false, -- can set to true to ignore tech unlocks
@@ -132,7 +134,7 @@ local fillSteamRecipe = {
 
 -- EMPTY STEAM BARREL RECIPE --
 
-local emptySteamRecipe = {
+local emptySteamRecipe165 = {
   allow_decomposition = false,
   category = "crafting-with-fluid",
   enabled = false, -- can set to true to ignore tech unlocks
@@ -213,45 +215,96 @@ local emptySteamRecipe = {
   type = "recipe"
 }
 
--- SUPER-HEATED NUCLEAR VARIANT --
-
-local superSteamBarrel = table.deepcopy(steamBarrel)
-superSteamBarrel.name = "super-steam-barrel"
-superSteamBarrel.order = "b[steam-barrel-500]"
-superSteamBarrel.localised_name[2][1] = "fluid-name.super-steam"
-superSteamBarrel.icons[2].tint.r = 1.0
-superSteamBarrel.icons[3].tint.r = 1.0
-
-local fillSuperSteamRecipe = table.deepcopy(fillSteamRecipe)
-fillSuperSteamRecipe.name = "fill-super-steam-barrel"
-fillSuperSteamRecipe.order = "b[fill-steam-barrel-500]"
-fillSuperSteamRecipe.localised_name[2][1] = "fluid-name.super-steam"
-fillSuperSteamRecipe.icons[2].tint.r = 1.0
-fillSuperSteamRecipe.ingredients[1].minimum_temperature = 500.0
-fillSuperSteamRecipe.results[1].name = "super-steam-barrel"
-
-local emptySuperSteamRecipe = table.deepcopy(emptySteamRecipe)
-emptySuperSteamRecipe.name = "empty-super-steam-barrel"
-emptySuperSteamRecipe.order = "c[empty-steam-barrel-500]"
-emptySuperSteamRecipe.localised_name[2][1] = "fluid-name.super-steam"
-emptySuperSteamRecipe.icons[2].tint.r = 1.0
-emptySuperSteamRecipe.ingredients[1].name = "super-steam-barrel"
-emptySuperSteamRecipe.results[1].temperature = 500.0
-
 -- TECHNOLOGY --
 
 table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "fill-steam-barrel"})
 table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "empty-steam-barrel"})
-table.insert(data.raw.technology["nuclear-power"].effects,  {type = "unlock-recipe", recipe = "fill-super-steam-barrel"})
-table.insert(data.raw.technology["nuclear-power"].effects,  {type = "unlock-recipe", recipe = "empty-super-steam-barrel"})
 
 -- EXTEND --
 
 data:extend{
-  steamBarrel,
-  fillSteamRecipe,
-  emptySteamRecipe,
-  superSteamBarrel,
-  fillSuperSteamRecipe,
-  emptySuperSteamRecipe,
+  steamBarrel165,
+  fillSteamRecipe165,
+  emptySteamRecipe165
+}
+
+---------------------------------
+-- SUPERHEATED NUCLEAR VARIANT --
+---------------------------------
+
+local steamBarrel500 = table.deepcopy(steamBarrel165)
+steamBarrel500.name = "super-steam-barrel"
+steamBarrel500.order = "b[steam-barrel-500]"
+steamBarrel500.localised_name[2][1] = "fluid-name.super-steam"
+steamBarrel500.icons[2].tint.r = 1.0
+steamBarrel500.icons[3].tint.r = 1.0
+
+local fillSteamRecipe500 = table.deepcopy(fillSteamRecipe165)
+fillSteamRecipe500.name = "fill-super-steam-barrel"
+fillSteamRecipe500.order = "b[fill-steam-barrel-500]"
+fillSteamRecipe500.localised_name[2][1] = "fluid-name.super-steam"
+fillSteamRecipe500.icons[2].tint.r = 1.0
+fillSteamRecipe500.ingredients[1].minimum_temperature = 500.0
+fillSteamRecipe500.results[1].name = "super-steam-barrel"
+
+local emptySteamRecipe500 = table.deepcopy(emptySteamRecipe165)
+emptySteamRecipe500.name = "empty-super-steam-barrel"
+emptySteamRecipe500.order = "c[empty-steam-barrel-500]"
+emptySteamRecipe500.localised_name[2][1] = "fluid-name.super-steam"
+emptySteamRecipe500.icons[2].tint.r = 1.0
+emptySteamRecipe500.ingredients[1].name = "super-steam-barrel"
+emptySteamRecipe500.results[1].temperature = 500.0
+
+-- TECHNOLOGY --
+
+table.insert(data.raw.technology["nuclear-power"].effects, {type = "unlock-recipe", recipe = "fill-super-steam-barrel"})
+table.insert(data.raw.technology["nuclear-power"].effects, {type = "unlock-recipe", recipe = "empty-super-steam-barrel"})
+
+-- EXTEND --
+
+data:extend{
+  steamBarrel500,
+  fillSteamRecipe500,
+  emptySteamRecipe500
+}
+
+---------------------------------
+-- UNINSULATED AMBIENT VARIANT --
+---------------------------------
+
+local steamBarrel015 = table.deepcopy(steamBarrel165)
+steamBarrel015.name = "ambient-steam-barrel"
+steamBarrel015.order = "b[steam-barrel-015]"
+steamBarrel015.localised_name[2][1] = "fluid-name.ambient-steam"
+steamBarrel015.icons[2].tint.r = 0.3
+
+local fillSteamRecipe015 = table.deepcopy(fillSteamRecipe165)
+fillSteamRecipe015.name = "fill-ambient-steam-barrel"
+fillSteamRecipe015.order = "b[fill-steam-barrel-015]"
+fillSteamRecipe015.localised_name[2][1] = "fluid-name.ambient-steam"
+fillSteamRecipe015.icons[2].tint.r = 0.3
+fillSteamRecipe015.ingredients[1].minimum_temperature = nil
+fillSteamRecipe015.results[1].name = "ambient-steam-barrel"
+
+local emptySteamRecipe015 = table.deepcopy(emptySteamRecipe165)
+emptySteamRecipe015.name = "empty-ambient-steam-barrel"
+emptySteamRecipe015.order = "c[empty-steam-barrel-015]"
+emptySteamRecipe015.localised_name[2][1] = "fluid-name.ambient-steam"
+emptySteamRecipe015.icons[2].tint.r = 0.3
+emptySteamRecipe015.ingredients[1].name = "ambient-steam-barrel"
+emptySteamRecipe015.results[1].temperature = 15.0
+
+-- TECHNOLOGY --
+
+if (settings.startup["enable-ambient-steam-barrel"].value) then
+  table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "fill-ambient-steam-barrel"})
+  table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "empty-ambient-steam-barrel"})
+end
+
+-- EXTEND --
+
+data:extend{
+  steamBarrel015,
+  fillSteamRecipe015,
+  emptySteamRecipe015
 }
