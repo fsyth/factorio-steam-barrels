@@ -1,0 +1,23 @@
+---------------------------------------------------------------------------------------------------
+Version: 17.0.4 / 18.0.4
+Date: 19 Apr 2020
+  Changes:
+    - Added optional 15 °C ambient temperature steam barrels to support certain other mods.
+    - Ambient steam recipes can be enabled in the in-game mod settings (disabled by default).
+---------------------------------------------------------------------------------------------------
+Version: 17.0.3 / 18.0.3
+Date: 05 Apr 2020
+  Bugfixes:
+    - Recipes now unlock if the mod was installed after the vanilla technologies were researched.
+---------------------------------------------------------------------------------------------------
+Version: 17.0.2 / 18.0.2
+Date: 02 Apr 2020
+  Changes:
+    - Added support for Factorio v0.18 by detecting correct icon sizes between versions.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 29 Mar 2020
+  Changes:
+    - Initial release for Factorio v0.17.
+    - Added 165 °C and 500 °C steam barrels, plus recipes and technologies.
+---------------------------------------------------------------------------------------------------
