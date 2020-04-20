@@ -1,0 +1,20 @@
+{
+  "entity": [
+    ["ambient-steam-barrel", "steam-barrel-015"],
+    ["steam-barrel",         "steam-barrel-165"],
+    ["super-steam-barrel",   "steam-barrel-500"]
+  ],
+  "item": [
+    ["ambient-steam-barrel", "steam-barrel-015"],
+    ["steam-barrel",         "steam-barrel-165"],
+    ["super-steam-barrel",   "steam-barrel-500"]
+  ],
+  "recipe": [
+    ["empty-ambient-steam-barrel", "empty-steam-barrel-015"],
+    ["empty-steam-barrel",         "empty-steam-barrel-165"],
+    ["empty-super-steam-barrel",   "empty-steam-barrel-500"],
+    ["fill-ambient-steam-barrel",  "fill-steam-barrel-015"],
+    ["fill-steam-barrel",          "fill-steam-barrel-165"],
+    ["fill-super-steam-barrel",    "fill-steam-barrel-500"]
+  ]
+}

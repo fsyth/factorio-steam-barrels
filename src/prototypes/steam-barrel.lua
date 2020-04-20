@@ -42,7 +42,7 @@ local steamBarrel165 = {
       "fluid-name.steam"
     }
   },
-  name = "steam-barrel",
+  name = "steam-barrel-165",
   order = "b[steam-barrel-165]",
   stack_size = 10,
   subgroup = "fill-barrel",
@@ -118,13 +118,13 @@ local fillSteamRecipe165 = {
       "fluid-name.steam"
     }
   },
-  name = "fill-steam-barrel",
+  name = "fill-steam-barrel-165",
   order = "b[fill-steam-barrel-165]",
   results = {
     {
       amount = 1,
       catalyst_amount = 1,
-      name = "steam-barrel",
+      name = "steam-barrel-165",
       type = "item"
     }
   },
@@ -184,7 +184,7 @@ local emptySteamRecipe165 = {
     {
       amount = 1,
       catalyst_amount = 1,
-      name = "steam-barrel",
+      name = "steam-barrel-165",
       type = "item"
     }
   },
@@ -194,7 +194,7 @@ local emptySteamRecipe165 = {
       "fluid-name.steam"
     }
   },
-  name = "empty-steam-barrel",
+  name = "empty-steam-barrel-165",
   order = "c[empty-steam-barrel-165]",
   results = {
     {
@@ -217,8 +217,8 @@ local emptySteamRecipe165 = {
 
 -- TECHNOLOGY --
 
-table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "fill-steam-barrel"})
-table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "empty-steam-barrel"})
+table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "fill-steam-barrel-165"})
+table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "empty-steam-barrel-165"})
 
 -- EXTEND --
 
@@ -233,32 +233,32 @@ data:extend{
 ---------------------------------
 
 local steamBarrel500 = table.deepcopy(steamBarrel165)
-steamBarrel500.name = "super-steam-barrel"
+steamBarrel500.name = "steam-barrel-500"
 steamBarrel500.order = "b[steam-barrel-500]"
 steamBarrel500.localised_name[2][1] = "fluid-name.super-steam"
 steamBarrel500.icons[2].tint.r = 1.0
 steamBarrel500.icons[3].tint.r = 1.0
 
 local fillSteamRecipe500 = table.deepcopy(fillSteamRecipe165)
-fillSteamRecipe500.name = "fill-super-steam-barrel"
+fillSteamRecipe500.name = "fill-steam-barrel-500"
 fillSteamRecipe500.order = "b[fill-steam-barrel-500]"
 fillSteamRecipe500.localised_name[2][1] = "fluid-name.super-steam"
 fillSteamRecipe500.icons[2].tint.r = 1.0
 fillSteamRecipe500.ingredients[1].minimum_temperature = 500.0
-fillSteamRecipe500.results[1].name = "super-steam-barrel"
+fillSteamRecipe500.results[1].name = "steam-barrel-500"
 
 local emptySteamRecipe500 = table.deepcopy(emptySteamRecipe165)
-emptySteamRecipe500.name = "empty-super-steam-barrel"
+emptySteamRecipe500.name = "empty-steam-barrel-500"
 emptySteamRecipe500.order = "c[empty-steam-barrel-500]"
 emptySteamRecipe500.localised_name[2][1] = "fluid-name.super-steam"
 emptySteamRecipe500.icons[2].tint.r = 1.0
-emptySteamRecipe500.ingredients[1].name = "super-steam-barrel"
+emptySteamRecipe500.ingredients[1].name = "steam-barrel-500"
 emptySteamRecipe500.results[1].temperature = 500.0
 
 -- TECHNOLOGY --
 
-table.insert(data.raw.technology["nuclear-power"].effects, {type = "unlock-recipe", recipe = "fill-super-steam-barrel"})
-table.insert(data.raw.technology["nuclear-power"].effects, {type = "unlock-recipe", recipe = "empty-super-steam-barrel"})
+table.insert(data.raw.technology["nuclear-power"].effects, {type = "unlock-recipe", recipe = "fill-steam-barrel-500"})
+table.insert(data.raw.technology["nuclear-power"].effects, {type = "unlock-recipe", recipe = "empty-steam-barrel-500"})
 
 -- EXTEND --
 
@@ -273,32 +273,32 @@ data:extend{
 ---------------------------------
 
 local steamBarrel015 = table.deepcopy(steamBarrel165)
-steamBarrel015.name = "ambient-steam-barrel"
+steamBarrel015.name = "steam-barrel-015"
 steamBarrel015.order = "b[steam-barrel-015]"
 steamBarrel015.localised_name[2][1] = "fluid-name.ambient-steam"
 steamBarrel015.icons[2].tint.r = 0.3
 
 local fillSteamRecipe015 = table.deepcopy(fillSteamRecipe165)
-fillSteamRecipe015.name = "fill-ambient-steam-barrel"
+fillSteamRecipe015.name = "fill-steam-barrel-015"
 fillSteamRecipe015.order = "b[fill-steam-barrel-015]"
 fillSteamRecipe015.localised_name[2][1] = "fluid-name.ambient-steam"
 fillSteamRecipe015.icons[2].tint.r = 0.3
 fillSteamRecipe015.ingredients[1].minimum_temperature = nil
-fillSteamRecipe015.results[1].name = "ambient-steam-barrel"
+fillSteamRecipe015.results[1].name = "steam-barrel-015"
 
 local emptySteamRecipe015 = table.deepcopy(emptySteamRecipe165)
-emptySteamRecipe015.name = "empty-ambient-steam-barrel"
+emptySteamRecipe015.name = "empty-steam-barrel-015"
 emptySteamRecipe015.order = "c[empty-steam-barrel-015]"
 emptySteamRecipe015.localised_name[2][1] = "fluid-name.ambient-steam"
 emptySteamRecipe015.icons[2].tint.r = 0.3
-emptySteamRecipe015.ingredients[1].name = "ambient-steam-barrel"
+emptySteamRecipe015.ingredients[1].name = "steam-barrel-015"
 emptySteamRecipe015.results[1].temperature = 15.0
 
 -- TECHNOLOGY --
 
 if (settings.startup["enable-ambient-steam-barrel"].value) then
-  table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "fill-ambient-steam-barrel"})
-  table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "empty-ambient-steam-barrel"})
+  table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "fill-steam-barrel-015"})
+  table.insert(data.raw.technology["fluid-handling"].effects, {type = "unlock-recipe", recipe = "empty-steam-barrel-015"})
 end
 
 -- EXTEND --
