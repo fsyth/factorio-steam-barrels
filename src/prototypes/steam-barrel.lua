@@ -92,7 +92,7 @@ local fillSteamRecipe165 = {
       icon_size = iconSize,  -- 32px in v0.17, 64px in v0.18
       scale = 16 / iconSize, -- 0.5  in v0.17, 0.25 in v0.18
       shift = {
-        4,
+        -8,
         -8
       }
     }
